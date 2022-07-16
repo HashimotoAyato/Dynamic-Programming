@@ -18,4 +18,5 @@ for i in range(n):
         else:
             dp[i+1,j] = max(dp[i,j], dp[i,j-w[i]] + v[i])
 
+print(dp)
 print(dp[n,W])
