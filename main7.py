@@ -9,7 +9,7 @@ dp[0,0] = 1
 for i in range(n+1):
     for j in range(1,m+1):
         if i < j:
-            dp[i,j] = dp[i,j-1]
+            dp[i,j] = dp[i,j-1] % M
         else:
             dp[i,j] = dp[i-j][j] + dp[i,j-1]
 
